@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="./leaflet/leaflet.css" />
+  <script src="leaflet/leaflet.js"></script>
+
+  <!-- My CSS & JS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <title>IP Address Tracker</title>
+</head>
+
+<body>
+  <section class="top">
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form class="search-bar" name="searchBar">
+        <input type="search" name="ip-search" placeholder="Search for any IP address or domain">
+        <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
+    </header>
+    <div class="ip-info">
+      <div class="ip-address">
+        <span>IP Address</span>
+        <h3 data-ip-address></h3>
+      </div>
+      <div class="ip-location">
+        <span>Location</span>
+        <h3 data-ip-location></h3>
+      </div>
+      <div class="ip-timezone">
+        <span>Timezone</span>
+        <h3 data-ip-timezone></h3>
+      </div>
+      <div class="ip-isp">
+        <span>ISP</span>
+        <h3 data-ip-isp></h3>
+      </div>
+    </div>
+  </section>
+  <section class="bottom" data-map></section>
+</body>
+
+</html>
